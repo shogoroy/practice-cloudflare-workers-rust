@@ -1,0 +1,6 @@
+name = "practice-rust"
+main = "build/worker/shim.mjs"
+compatibility_date = "2025-03-16"
+
+[build]
+command = "cargo install -q worker-build && worker-build --release"
