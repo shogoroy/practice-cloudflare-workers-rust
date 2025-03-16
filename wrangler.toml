@@ -1,4 +1,4 @@
-name = "practice-rust"
+name = "practice-cloudflare-workers-rust"
 main = "build/worker/shim.mjs"
 compatibility_date = "2025-03-16"
 
