@@ -1,4 +1,9 @@
-use axum::{routing::get, Router};
+use askama::Template;
+use axum::{
+    response::{Html, IntoResponse},
+    routing::get,
+    Router,
+};
 use tower_service::Service;
 use worker::*;
 
@@ -16,6 +21,11 @@ async fn fetch(
     Ok(router().call(req).await?)
 }
 
-pub async fn root() -> &'static str {
-    "Hello Axum!"
+#[derive(Template)]
+#[template(path = "index.html")]
+struct Tmpl {}
+
+pub async fn root() -> impl IntoResponse {
+    let tmpl = Tmpl {};
+    Html(tmpl.render().unwrap()).into_response()
 }
