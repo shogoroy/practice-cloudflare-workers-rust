@@ -22,7 +22,7 @@ async fn fetch(
 }
 
 #[derive(Template)]
-#[template(path = "index.html")]
+#[template(path = "../index.html")]
 struct Tmpl {}
 
 pub async fn root() -> impl IntoResponse {
