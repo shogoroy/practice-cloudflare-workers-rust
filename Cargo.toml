@@ -15,6 +15,10 @@ wasm-opt = false
 path = "src/server.rs"
 crate-type = ["cdylib"]
 
+[[bin]]
+name = "front"
+path = "src/front.rs"
+
 [dependencies]
 worker = { version="0.5.0", features=['http', 'axum'] }
 worker-macros = { version="0.5.0", features=['http'] }
