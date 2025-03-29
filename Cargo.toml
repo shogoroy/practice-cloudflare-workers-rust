@@ -12,6 +12,7 @@ release = false
 wasm-opt = false
 
 [lib]
+path = "src/server.rs"
 crate-type = ["cdylib"]
 
 [dependencies]
